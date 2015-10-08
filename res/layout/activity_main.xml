@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="背景Service控制 page1" />
+    
+    <Button 
+        android:id="@+id/btn_startservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#ff008000"
+        android:text="Start Service" />
+    
+    <Button 
+        android:id="@+id/btn_stopservice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#ffff0000"
+        android:text="Stop Service" />
+    
+    <TextView 
+        android:id="@+id/txtview_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:text="0"
+        android:textSize="24sp" />    
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal" >
+        
+        <Button 
+            android:id="@+id/btn_slavepage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="page2" />
+        
+        <Button 
+            android:id="@+id/btn_stopservicepage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="page3" />
+        
+        <Button 
+            android:id="@+id/btn_zoompage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="pagezoom" />
+        
+                    
+    </LinearLayout>
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        
+        <EditText 
+            android:id="@+id/edittext_tabpage"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+        
+        <Button 
+            android:id="@+id/btn_tabpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="To TabPage" />
+                                
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        
+        <Button 
+            android:id="@+id/btn_webviewpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To WebViewPage" />
+        
+    </LinearLayout>
+                            
+</LinearLayout>

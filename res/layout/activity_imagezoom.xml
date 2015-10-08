@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- two dimension scrollview -->
+        <customview.CustomScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnlinearlayout"
+            android:scrollbars="none" >
+            
+            <customview.CustomHorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+                
+                <customview.ZoomableRelativeLayout
+            android:id="@+id/zoomableRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+                
+            <ImageView
+	           android:id="@+id/smartimageView"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content" />            
+            
+        </customview.ZoomableRelativeLayout>
+            
+                
+            </customview.CustomHorizontalScrollView>
+                    
+            
+            
+        </customview.CustomScrollView>
+            
+            
+        
+        <LinearLayout
+            android:id="@+id/btnlinearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            
+            <Button 
+                android:id="@+id/btn_mainpage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="page1" />
+            
+            <Button 
+                android:id="@+id/btn_slavepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="page2" />
+            
+            <Button 
+                android:id="@+id/btn_stopservicepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="page3" />
+                            
+        </LinearLayout>
+        
+    </RelativeLayout>
+        
+        
+</LinearLayout>
