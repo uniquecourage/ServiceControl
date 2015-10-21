@@ -1,4 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -101,5 +105,38 @@
             android:text="To WebViewPage" />
         
     </LinearLayout>
+    
+    
                             
 </LinearLayout>
+
+<SlidingDrawer
+        android:id="@+id/slidingdrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:handle="@+id/imageView_handleImage"
+        android:content="@+id/gridView_contentShow"
+        android:orientation="vertical" >"
+        
+        <ImageView 
+            android:id="@+id/imageView_handleImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/open" />
+        
+        
+        <GridView
+            android:id="@+id/gridView_contentShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff696969"
+            android:numColumns="3"
+            android:gravity="center" />"
+        
+        
+    </SlidingDrawer>    
+    "
+    
+</RelativeLayout>
+

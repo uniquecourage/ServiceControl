@@ -10,16 +10,24 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.SlidingDrawer;
 
 public class MainActivity extends Activity {
 
@@ -32,6 +40,11 @@ public class MainActivity extends Activity {
 	private EditText edittext_tabpage;
 	private Button btn_tabpage;
 	private Button btn_webviewpage;
+	
+	private SlidingDrawer slidingdrawer;
+	private LinearLayout linearlayout1;
+	private ImageView imageView_handleImage;
+	private GridView gridView_contentShow;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +167,36 @@ public class MainActivity extends Activity {
 			}
 			
 		});
+		
+		slidingdrawer = (SlidingDrawer) findViewById(R.id.slidingdrawer);
+		imageView_handleImage = (ImageView) findViewById(R.id.imageView_handleImage);
+		int[] icon = {R.drawable.systemicon}; //圖片陣列
+		String[] text = {"Multi Service"};
+		GridAdapter gp = new GridAdapter(this, icon, text);
+		gridView_contentShow = (GridView) findViewById(R.id.gridView_contentShow);
+		gridView_contentShow.setAdapter(gp);
+		
+		// 打開抽屜時呼叫
+		slidingdrawer.setOnDrawerOpenListener(new SlidingDrawer.OnDrawerOpenListener() {
+
+			@Override
+			public void onDrawerOpened() {
+				// TODO Auto-generated method stub
+				imageView_handleImage.setImageResource(R.drawable.close);
+			}
+			
+		});
+		
+		// 關閉抽屜時呼叫
+		slidingdrawer.setOnDrawerCloseListener(new SlidingDrawer.OnDrawerCloseListener() {
+
+			@Override
+			public void onDrawerClosed() {
+				// TODO Auto-generated method stub
+				imageView_handleImage.setImageResource(R.drawable.open);
+			}
+			
+		});
 	}
 	
 	
@@ -217,4 +260,77 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	// 自訂GridAdapter
+	class GridAdapter extends BaseAdapter {
+
+		MainActivity mActivity;
+		int[] icon;
+		String[] text;
+		
+		public GridAdapter(Context context, int[] icon, String[] text) {
+			this.mActivity = (MainActivity)context;
+			this.icon = icon;
+			this.text = text;
+		}
+		
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return this.icon.length;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			// TODO Auto-generated method stub
+			LayoutInflater factory = LayoutInflater.from(mActivity);
+			View view = (View) factory.inflate(R.layout.griditem, null);
+			ImageView iv = (ImageView) view.findViewById(R.id.imageView_icon);
+			TextView tv = (TextView) view.findViewById(R.id.txtView_text);
+			iv.setImageResource(icon[position]);
+			tv.setText(text[position]);
+			tv.setTextSize(20);
+			tv.setTextColor(Color.WHITE);
+			view.setPadding(3, 3, 3, 3);
+			select(mActivity, view, position);
+			return view;
+		}
+		
+		public void select(Context context, View view, int position) {
+			final MainActivity ma = (MainActivity)context;
+			final int index = position;
+			view.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					switch(index) {
+					case 0:
+						Intent i = new Intent(ma, MultiServicesActivity.class);
+						startActivity(i);
+						MainActivity.this.finish();
+						break;
+					}
+				}
+				
+			});
+		}
+		
+	}
+
+ 
 }
+

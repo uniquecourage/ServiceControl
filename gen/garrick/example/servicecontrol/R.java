@@ -22,18 +22,29 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int cadlightingdrawing=0x7f020000;
-        public static final int foot_rise_red=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int left_exit=0x7f020003;
-        public static final int map=0x7f020004;
+        public static final int bulb=0x7f020000;
+        public static final int bulb_blue=0x7f020001;
+        public static final int bulb_green=0x7f020002;
+        public static final int bulb_yellow=0x7f020003;
+        public static final int cadlightingdrawing=0x7f020004;
+        public static final int close=0x7f020005;
+        public static final int dayviewicon=0x7f020006;
+        public static final int foot_rise_red=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int left_exit=0x7f020009;
+        public static final int map=0x7f02000a;
+        public static final int messagicon=0x7f02000b;
+        public static final int open=0x7f02000c;
+        public static final int selecticon=0x7f02000d;
+        public static final int systemicon=0x7f02000e;
     }
     public static final class id {
-        public static final int action_settings=0x7f080015;
-        public static final int btn_main=0x7f080010;
+        public static final int action_settings=0x7f080020;
+        public static final int btn_main=0x7f080018;
         public static final int btn_mainpage=0x7f080005;
         public static final int btn_slavepage=0x7f080006;
         public static final int btn_startservice=0x7f080008;
+        public static final int btn_stop_all_services=0x7f080016;
         public static final int btn_stopservice=0x7f080009;
         public static final int btn_stopservicepage=0x7f080007;
         public static final int btn_tabpage=0x7f08000d;
@@ -41,25 +52,37 @@ public final class R {
         public static final int btn_zoompage=0x7f08000b;
         public static final int btnlinearlayout=0x7f080001;
         public static final int edittext_tabpage=0x7f08000c;
+        public static final int gridView_contentShow=0x7f080011;
         public static final int horizontalScrollView=0x7f080002;
-        public static final int imageView1=0x7f080014;
-        public static final int mapLayout=0x7f080013;
-        public static final int pager=0x7f080011;
+        public static final int imageView1=0x7f08001f;
+        public static final int imageView_handleImage=0x7f080010;
+        public static final int imageView_icon=0x7f08001c;
+        public static final int imgView_bluelight=0x7f080012;
+        public static final int imgView_greenlight=0x7f080014;
+        public static final int linearlayout1=0x7f08001b;
+        public static final int mapLayout=0x7f08001e;
+        public static final int pager=0x7f080019;
         public static final int scrollview=0x7f080000;
+        public static final int slidingdrawer=0x7f08000f;
         public static final int smartimageView=0x7f080004;
-        public static final int txtView_index=0x7f08000f;
+        public static final int txtView_bluelight=0x7f080013;
+        public static final int txtView_greenlight=0x7f080015;
+        public static final int txtView_index=0x7f080017;
+        public static final int txtView_text=0x7f08001d;
         public static final int txtview_control=0x7f08000a;
-        public static final int webView=0x7f080012;
+        public static final int webView=0x7f08001a;
         public static final int zoomableRelativeLayout=0x7f080003;
     }
     public static final class layout {
         public static final int activity_imagezoom=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int activity_slave=0x7f030002;
-        public static final int activity_stopservice=0x7f030003;
-        public static final int activity_tabpage=0x7f030004;
-        public static final int activity_webview=0x7f030005;
-        public static final int viewpager_map=0x7f030006;
+        public static final int activity_multiservices=0x7f030002;
+        public static final int activity_slave=0x7f030003;
+        public static final int activity_stopservice=0x7f030004;
+        public static final int activity_tabpage=0x7f030005;
+        public static final int activity_webview=0x7f030006;
+        public static final int griditem=0x7f030007;
+        public static final int viewpager_map=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f070000;
